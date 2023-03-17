@@ -8,8 +8,8 @@ route.get("/", (req, res) => {
 route.post("/", (req, res) => {
   console.log(req.body.value);
   let a = req.body.value;
-  let result = x + a;
-  res.send(result.toString());
+  x+=a;
+  res.send(x.toString());
 });
 route.delete("/", (req, res) => {
   let a = 100;

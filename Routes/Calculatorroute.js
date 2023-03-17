@@ -5,11 +5,10 @@ let x = 100;
 route.get("/", (req, res) => {
   res.send(x.toString());
 });
-route.post("/", (req, res) => {
-  console.log(req.body.value);
+route.put("/", (req, res) => {
   let a = req.body.value;
-  let result = x + a;
-  res.send(result.toString());
+  x += a;
+  res.send(x.toString());
 });
 route.delete("/", (req, res) => {
   let a = 100;

@@ -5,7 +5,8 @@ let x = 100;
 route.get("/", (req, res) => {
   res.send(x.toString());
 });
-route.put("/", (req, res) => {
+route.post("/", (req, res) => {
+  console.log(req.body.value);
   let a = req.body.value;
   x += a;
   res.send(x.toString());
